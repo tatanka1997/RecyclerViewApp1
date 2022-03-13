@@ -31,6 +31,7 @@ class EventAdapter(
     }
 
     override fun onBindViewHolder(holder: EventViewHolder, position: Int) {
+        eventList.sortBy { it.date }
         val event = eventList[position]
 
         holder.bind(event)
