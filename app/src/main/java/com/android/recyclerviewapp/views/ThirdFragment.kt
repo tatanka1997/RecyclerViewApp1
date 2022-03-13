@@ -36,8 +36,8 @@ class ThirdFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding.eventTitleEt.text=event.title
-            binding.eventCategoryEt.text=event.category
-            val eventKoha= SimpleDateFormat("yyyy/M/dd").parse(event.date).time
+        binding.eventCategoryEt.text=event.category
+        val eventKoha= SimpleDateFormat("yyyy/M/dd").parse(event.date).time
         binding.daysleft.text= ((eventKoha-binding.eventCalendar.date)/86400000+1).toString()+" days left"
         binding.eventCalendar.date=eventKoha
         return binding.root
